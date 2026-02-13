@@ -1,17 +1,33 @@
 /*   */
 
 :root {
-	--bg-light: #BBBFBF;
+	--bg-light: #ffffff;
 	--font:"inter", sans-serif;
 }
-
 body {
-	font-family:var( --font);
-	background: var( --bg-light);
+	background-color: var(--bg-light);
+}
+.DaBox {
+	background-color: rgb(231, 255, 215);
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.text_box {
-	display: flex;
-	flex-direction: row;
-	justify-content:space around;
-}	
+#title {
+	display:grid;
+	grid-template-columns: auto auto;
+}
+
+#title > #Sutton_headshot {
+	border-radius: 25%;
+	margin: 1rem 3rem;
+	max-width: 40%;
+	max-height: auto;
+	justify-self: right;
+}
+
+#title > h1 {
+	align-self: center;
+	margin: 2rem;
+}
