@@ -1,18 +1,23 @@
-/*   */
-
+/* Global variables  */
 :root {
 	--bg-light: #ffffff;
 	--font:"inter", sans-serif;
 }
+
+
+/* global styles */
 body {
 	background-color: var(--bg-light);
 	font-family: var(--font);
+	font-size: 18px;
 }
-
 section {
 	padding-right: 2rem;
 	padding-left: 2rem;
 }
+
+
+/* container object for full document, has background color */
 .DaBox {
 	background-color: rgb(231, 255, 215);
 	max-width: 80%;
@@ -20,57 +25,76 @@ section {
 	margin-right: auto;
 }
 
+/* header at the top of the page */
 #title {
 	display:grid;
 	grid-template-columns: auto auto;
 	padding-left: 2rem;
 	padding-right: 3rem;
 }
-
 #title > #Sutton_headshot {
 	border-radius: 25%;
 	margin: 1rem 3rem;
 	max-width: 40%;
+	min-width: 200px;
 	max-height: auto;
-	justify-self: center;
+	justify-self: start;
+	z-index: 1;
 }
-
 #title > h1 {
 	align-self: end;
 	margin: 2rem;
 	font-size: 75px;
+	z-index: 2;
 }
-
 #title > p {
 	font-size: 16pt;
 }
-/* alternating content --start right */
-.heading2 > h1 {
-	grid-column-start: 2;
-	grid-row-start: 1;
+#title > button {
+	background-color: rgb(231, 255, 215);
+	border-radius: 25%;
+	border: none;
+	width: 40%;
+	height: 40%;
+	align-self: center;
+	font-family: var(--font);
+	font-size: 16pt;
 }
-.heading2 {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: auto auto;
-}
-
-/* alternating content --start left */
-.heading {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-template-rows: auto auto;
-}
-.heading > h1 {
-	grid-column-start: 1;
-	grid-row-start: 1;
+#title > button:hover {
+	color:#00916E;
 }
 
-.heading > p {
-	grid-column-start: 2;
-	grid-row-start: 2;
+
+/* section - about information */
+#about {
+	display: grid;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	
 }
-.heading2 > p {
-	grid-column-start: 2;
-	grid-row-start: 2;
+#about > h1 {
+	align-self: stretch;
 }
+#about > p {
+	/* empty stuff placeholder */
+}
+
+/* Python dev info */
+#python {
+	display: grid;
+	padding-top:10%;
+	padding-bottom 10%;
+}
+
+#info {
+	display:grid;
+	padding-top:10%;
+	padding-bottom:10%;
+}
+
+/* contact form */
+form {
+	display: grid;
+	grid-template-rows: auto auto auto:
+}
+
