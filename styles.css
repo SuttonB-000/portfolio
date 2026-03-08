@@ -27,15 +27,16 @@ body {
 	background-color: var(--bg-light);
 	font-family: var(--font);
 	font-size: 18px;
-	max-width: 600px;
-	justify-self: center;
-	display: grid;
 }
+
 section {
 	padding-right: 2rem;
 	padding-left: 2rem;
 }
 
+#contain_all {
+	max-width: 600px;
+	margin: 0 auto;
 
 
 /* button styles on page */
@@ -107,11 +108,6 @@ a {
 }
 
 /* nav menu styles */
-head {
-	display: grid;
-	grid-template-columns: auto;
-}
-
 .menuIcon {
 	position: fixed;
 	justify-self: end;
