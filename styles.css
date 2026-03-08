@@ -1,15 +1,47 @@
 /* Global variables  */
 :root {
-	--bg-light: #ffffff;
+	--bg-light: rgb(231, 255, 215);
 	--font:"inter", sans-serif;
 }
 
+@font-face {
+	font-family: 'Garbata';
+	src: url(/fonts/GarbataTrial-Black.ttf);
+}
+
+@media (max-width: 450px) {
+	.content {
+		display: grid;
+		grid-template-columns: 1fr; 
+	}
+	.logo {
+		display: block;
+	}
+	.logoSub {
+		display: block;
+	}
+}
+
+.logo {
+	font-family: 'Garbata';
+	margin: 0;
+	display: inline;
+}
+
+.logoSub {
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	display: inline;
+}
 
 /* global styles */
 body {
 	background-color: var(--bg-light);
 	font-family: var(--font);
 	font-size: 18px;
+	max-width: 600px;
+	justify-self: center;
+	display: grid;
 }
 section {
 	padding-right: 2rem;
@@ -17,12 +49,19 @@ section {
 }
 
 
-/* container object for full document, has background color */
-.DaBox {
-	background-color: rgb(231, 255, 215);
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+/* Mobile */
+.mobile {
+	max-width: 350px;
+}
+
+/* button styles on page */
+button {
+	background-color:rgb(250, 255, 247);
+	justify-self: center;
+	background-color: none;
+	align-self: center;
+	font-family: var(--font);
+
 }
 
 /* header at the top of the page */
@@ -37,7 +76,7 @@ section {
 	margin: 1rem 3rem;
 	max-width: 40%;
 	min-width: 200px;
-	max-height: auto;
+/* 	max-height: auto; */
 	justify-self: start;
 	z-index: 1;
 }
@@ -50,54 +89,93 @@ section {
 #title > p {
 	font-size: 16pt;
 }
-#title > button {
-	background-color: rgb(231, 255, 215);
-	border-radius: 25%;
-	border: none;
-	width: 40%;
-	height: 40%;
+
+#c2a {
+	display: grid;
+	grid-template-columns: auto 35% auto;
+}
+
+#c2a > button {
+	background-color:#FAFFF7;
+	justify-self: center;
+	background-color: none;
 	align-self: center;
 	font-family: var(--font);
-	font-size: 16pt;
+	font-size: 18pt;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	margin: 25px;
 }
-#title > button:hover {
-	color:#00916E;
+
+.banner {
+	padding-top: 20px;
+}
+
+.content {
+	max-width: 600px;
+	justify-self: center;
 }
 
 
+a {
+	text-decoration: none;
+	color: black;
+}
 
-/* hamburger menu styles */
-nav {
+/* nav menu styles */
+head {
 	display: grid;
 	grid-template-columns: auto;
 }
 
-nav > button {
-	align-self: right;
-	max-width: 15%;
-	justify-self: right;
-
+.menuIcon {
+	position: fixed;
+	justify-self: end;
+	z-index: 10;
 }
 
-nav > ul {
-	display:;
-	justify-self: right;
-	list-style: none;
+.menuContent {
+	display:none; /* hidden by default */
+	position: fixed;
+	padding-top: 20px;
+	z-index: 10;
 }
 
-nav > #menuBox {
-	background-color: rgba(255, 174, 82, 0.55);
-	grid-template-columns: auto;
-	max-width: 50%;
-	justify-self: right;
+.show {
+	display: block;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 130px;
+	background-color: #f1f1f1;
 	height: 100%;
-	z-index:;
+	
+	overflow: auto;
 }
 
+li a {
+	display: block;
+	color: black;
+	padding: 8px 16px;
+	text-decoration: none;
+}
 
+a {
+	text-align: center;
+}
 
+li a:hover {
+	background-color: #555555;
+	color: white;
+}
 
-
+.active {
+	background-color: #04AA6D;
+	color: white;
+}
 
 /* section - about information */
 #about {
@@ -109,9 +187,7 @@ nav > #menuBox {
 #about > h1 {
 	align-self: stretch;
 }
-#about > p {
-	/* empty stuff placeholder */
-}
+
 
 /* Python dev info */
 #python {
