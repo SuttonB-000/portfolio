@@ -9,18 +9,6 @@
 	src: url(/fonts/GarbataTrial-Black.ttf);
 }
 
-@media (max-width: 450px) {
-	.content {
-		display: grid;
-		grid-template-columns: 1fr; 
-	}
-	.logo {
-		display: block;
-	}
-	.logoSub {
-		display: block;
-	}
-}
 
 .logo {
 	font-family: 'Garbata';
